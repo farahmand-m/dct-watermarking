@@ -13,7 +13,7 @@ assert(nc == 1);
 % Compression and NC Check
 imwrite(W_image, 'tmp.jpg', 'quality', Q);
 W_image_com = imread('tmp.jpg');
-% figure, imshow(W_image_com);
+figure, imshow(W_image_com);
 W1D_ = extract_proj(W_image_com, B, a, K);
 nc = NC_project(W1D_, W1D);
 % Extracting the Watermark

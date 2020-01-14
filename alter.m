@@ -35,7 +35,7 @@ if current_data ~= data
     end
     % Applying the alpha rate
     offset = alpha * (a - 1);
-    a_ = floor(a - offset);
+    a_ = floor(a - offset) + 1;
     % Picking the new values for tr(a + 1, a) and tr(a, a + 1)
     vertical_selection_region = tr(a_:end, :);
     horizontal_selection_region = tr(:, a_:end);
